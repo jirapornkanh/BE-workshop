@@ -37,5 +37,13 @@ public class CircularBufferTest {
         assertNull("Don't have data in buffer", cb.readData());
     }
 
+    @Test
+    public void Read_data_and_write_data_later() {
+        CircularBuffer cb = new CircularBuffer();
+        assertTrue(cb.isEmpty());
+        cb.writeData("A");
+        assertEquals("A", cb.readData());
+    }
+
 
 }
